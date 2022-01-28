@@ -1,7 +1,7 @@
 <template>
     <router-link class="flex items-center justify-start gap-2 transition-all duration-300 relative group-one" :to="to">
-        <div class="rounded-full bg-gray-800 group-one-hover:bg-gray-700 p-2"><slot class="group-one-hover: text-gray-50" /></div>
-        <p class="text-lg transition-all overflow-hidden" :class="[navOpen ? 'opacity-100 ml-0 w-auto' : 'opacity-0 -ml-8 w-0']">{{name}}</p>
+        <div class="icon-bg rounded-full bg-gray-800 group-one-hover:bg-gray-700 p-2 transition-colors"><slot /></div>
+        <p class="text-lg transition-all duration-300 overflow-hidden group-one-hover:text-gray-50" :class="[navOpen ? 'opacity-100 ml-0' : 'opacity-0 -ml-8']">{{name}}</p>
         <div class="tooltip rounded-md absolute left-16 ml-4 top-1/2 transform -translate-y-1/2 px-3 py-1 bg-gray-800 scale-0 group-one-hover:scale-100 origin-left transition-all" :class="[navOpen ? 'hidden' : 'block']">{{name}}</div>
     </router-link>
 </template>
@@ -20,6 +20,12 @@
     border-top-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
+}
+.router-link-active{
+  @apply text-gray-50;
+}
+.router-link-active .icon-bg{
+    @apply bg-gray-700;
 }
 </style>
 <script>

@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       transitionProperty: {
         width: 'width, min-width, max-width',
-        margin: 'margin'
+        margin: 'margin',
+        widthMargin: 'width, min-width, max-width, margin'
       }
     },
     namedGroups: ['one', 'two', 'three', 'four']
